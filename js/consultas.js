@@ -8,3 +8,10 @@ const equiposMayoresEdad = (equipos, edad) => {
   );
   return equiposAsignadosMayoresEdad;
 };
+const equiposProvincia = (equipos, provincia) => {
+  const equiposProvinciaQueBuscamos = equipos.filter(
+    ({ asignado: { provincia: provinciaAsignado } }) =>
+      provinciaAsignado.toLowerCase() === provincia.toLowerCase()
+  );
+  return equiposProvinciaQueBuscamos;
+};
