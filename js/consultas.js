@@ -24,3 +24,5 @@ const equiposPorEdad = (equipos) => equipos.sort(({
         empleado: { edad: edadTrabajadorB }
     }
 }) => edadTrabajadorA - edadTrabajadorB);
+const equiposTipo = (equipos, tipo) =>
+    equipos.filter(({ tipo: tipoEquipo }) => tipoEquipo.toLowerCase() === tipo.toLowerCase());
