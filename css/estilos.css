@@ -1,0 +1,21 @@
+.contenedor-main {
+  background-color: #90a081;
+}
+.contenedor-main .lista-ordenes li {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.contenedor-aside {
+  background-color: #f1ac7b;
+}
+.contenedor-aside .contenedor-resultado {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.consola {
+  background: #000;
+  color: #0dbc79;
+  border-radius: 5px;
+  padding: 10px;
+  height: 500.25px;
+}
