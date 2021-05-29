@@ -10,9 +10,11 @@
 }
 .consola {
   background: #000;
-  color: #0dbc79;
   border-radius: 5px;
   padding: 10px;
   height: 500.25px;
   overflow-y: scroll;
+}
+.consola pre {
+  color: #0dbc79;
 }
