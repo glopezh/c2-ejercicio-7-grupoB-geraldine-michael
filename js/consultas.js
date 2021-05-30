@@ -45,3 +45,9 @@ const resumenEquipos = (equipos) =>
         poblacion,
         provincia,
     }));
+
+
+const provincias = (equipos) =>
+  equipos.map(({asignado:{provincia}})=>({
+    provincia,
+  }));
