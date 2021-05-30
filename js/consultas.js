@@ -37,3 +37,9 @@ const trabajadoresTipo = (equipos, tipo) =>
         ({ tipo: tipoEquipo }) => tipoEquipo.toLowerCase() === tipo.toLowerCase()
     )
     .map(({ asignado: { empleado } }) => empleado);
+const equiposTipoLocalidad = (equipos, tipo, localidad) =>
+    equipos.filter(
+        ({ tipo: equipoTipo, asignado: { provincia: trabajadoresProvincia } }) =>
+        equipoTipo.toLowerCase() === tipo.toLowerCase() &&
+        trabajadoresProvincia.toLowerCase() === localidad.toLowerCase()
+    );
