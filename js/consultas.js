@@ -43,3 +43,9 @@ const equiposTipoLocalidad = (equipos, tipo, localidad) =>
         equipoTipo.toLowerCase() === tipo.toLowerCase() &&
         trabajadoresProvincia.toLowerCase() === localidad.toLowerCase()
     );
+const resumenEquipos = (equipos) =>
+    equipos.map(({ id, asignado: { poblacion, provincia } }) => ({
+        id,
+        poblacion,
+        provincia,
+    }));
