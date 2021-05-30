@@ -15,14 +15,25 @@ const equiposProvincia = (equipos, provincia) => {
     );
     return equiposProvinciaQueBuscamos;
 };
-const equiposPorEdad = (equipos) => equipos.sort(({
-    asignado: {
-        empleado: { edad: edadTrabajadorA }
-    }
-}, {
-    asignado: {
-        empleado: { edad: edadTrabajadorB }
-    }
-}) => edadTrabajadorA - edadTrabajadorB);
+const equiposPorEdad = (equipos) =>
+    equipos.sort(
+        ({
+            asignado: {
+                empleado: { edad: edadTrabajadorA },
+            },
+        }, {
+            asignado: {
+                empleado: { edad: edadTrabajadorB },
+            },
+        }) => edadTrabajadorA - edadTrabajadorB
+    );
 const equiposTipo = (equipos, tipo) =>
-    equipos.filter(({ tipo: tipoEquipo }) => tipoEquipo.toLowerCase() === tipo.toLowerCase());
+    equipos.filter(
+        ({ tipo: tipoEquipo }) => tipoEquipo.toLowerCase() === tipo.toLowerCase()
+    );
+const trabajadoresTipo = (equipos, tipo) =>
+    equipos
+    .filter(
+        ({ tipo: tipoEquipo }) => tipoEquipo.toLowerCase() === tipo.toLowerCase()
+    )
+    .map(({ asignado: { empleado } }) => empleado);
