@@ -57,3 +57,11 @@ const puestos = (equipos) =>
     }))
     .filter((puesto, index, puestos) => puestos.indexOf(puesto) === index);
 
+const edadMedia = (equipos) =>
+  equipos
+    .map(({ asignado: { empleado: { edad } } }) =>
+    edad
+  ).reduce(
+      (acumulador, edad, _index, edades) => edad / edades.length + acumulador,
+      0
+    );
