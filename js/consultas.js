@@ -46,8 +46,25 @@ const resumenEquipos = (equipos) =>
         provincia,
     }));
 
+const eliminaDuplicados = (arr) => {
+
+  const unicos = [];
+
+  for (let i = 0; i < arr.length; i++) {
+
+    const elemento = arr[i];
+
+    if (!unicos.includes(arr[i])) {
+      unicos.push(elemento);
+    }
+  }
+
+  return unicos;
+}
+
 
 const provincias = (equipos) =>
-  equipos.map(({asignado:{provincia}})=>({
-    provincia,
-  }));
+  equipos.map(({asignado:{provincia}})=>provincia)
+  .filter((provincia, index, provincias) => provincias.indexOf(provincia) === index);
+
+
