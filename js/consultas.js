@@ -50,4 +50,10 @@ const provincias = (equipos) =>
   equipos.map(({asignado:{provincia}})=>provincia)
   .filter((provincia, index, provincias) => provincias.indexOf(provincia) === index);
 
+const puestos = (equipos) =>
+  equipos
+    .map(({ asignado: { empleado: { puesto } } }) => ({
+      Puesto: puesto,
+    }))
+    .filter((puesto, index, puestos) => puestos.indexOf(puesto) === index);
 
